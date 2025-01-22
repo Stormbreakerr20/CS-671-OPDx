@@ -61,3 +61,7 @@ This command will initiate the model, allowing you to perform differential diagn
 1. Install the requirements.txt in UI folder
 2. Navigate to the UI/app directory and run `uvicorn server:app` to start the server.
 3. In a new terminal, navigate to the UI/stlit/pages directory and then run `streamlit run ./Home.py`
+
+## Final Project Presentation
+
+You can view the final project presentation [here](https://docs.google.com/presentation/d/11yqWxgCaFN6skNEO1nGk0mxf0vsddR6q1PD7L4g6bXk/edit?usp=sharing).
