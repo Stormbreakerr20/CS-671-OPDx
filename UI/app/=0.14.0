@@ -1,0 +1,5 @@
+Collecting uvloop
+  Using cached uvloop-0.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Using cached uvloop-0.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+Installing collected packages: uvloop
+Successfully installed uvloop-0.19.0

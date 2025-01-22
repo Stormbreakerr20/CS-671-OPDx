@@ -1,0 +1,25 @@
+FROM medllama2:7b
+ADAPTER ./ggml-adapter-model.bin
+
+TEMPLATE """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+
+{{ if .System }}### Instruction:
+{{ .System }}{{ end }}
+
+{{ if .Prompt }}### Input:
+{{ .Prompt }}{{ end }}
+
+### Response:
+"""
+
+SYSTEM """If I tell you that I am not well or have any medical problem, analyse my conditions carefully, and remember any information about my symptoms or medical history. 
+Keep asking follow-up questions about the symptoms and any other information that may help you to narrow down at a differential diagnosis. Do not ask more than 2 questions at a time. 
+If and only if you are confident about it, provide me with a list of possible diagnoses, three or four at maximum, ranked by likelihood, and a brief explanation of your reasoning. 
+Keep asking questions otherwise, not more than 2 at a time."""
+
+PARAMETER stop "###"
+PARAMETER stop "{"
+PARAMETER stop "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request."
+
+PARAMETER num_predict 200
